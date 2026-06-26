@@ -14,6 +14,7 @@ class Background(entity, ABC):
 
     def move(self, ):
         self.rect.centerx -= ENTITY_SPEED[self.name]
-        if self.rect.right<= 0:
+        if self.rect.right <= 0:
             self.rect.left = WIN_WIDTH
-        pass
+
+
