@@ -5,7 +5,7 @@ from abc import ABC
 from code.Const import WIN_WIDTH, ENTITY_SPEED
 from code.entity import entity
 
-class Background(entity, ABC):
+class background(entity, ABC):
 
 
     def __init__(self, name: str, position: tuple):
