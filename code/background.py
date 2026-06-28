@@ -3,9 +3,9 @@
 from abc import ABC
 
 from code.Const import WIN_WIDTH, ENTITY_SPEED
-from code.entity import entity
+from code.Entity import Entity
 
-class background(entity, ABC):
+class background(Entity, ABC):
 
 
     def __init__(self, name: str, position: tuple):

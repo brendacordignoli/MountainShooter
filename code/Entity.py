@@ -1,12 +1,9 @@
 #!/usr/bin/python
 import abc
-
 import pygame
-
 from code.Const import ENTITY_HEALTH
 
-
-class entity(abc.ABC):
+class Entity(abc.ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name
         self.surf = pygame.image.load('./asset/' + name + '.png').convert_alpha()
@@ -15,7 +12,5 @@ class entity(abc.ABC):
         self.health = ENTITY_HEALTH[self.name]
 
     @abc.abstractmethod
-    def move(self, ):
+    def move(self):
         pass
-
-
