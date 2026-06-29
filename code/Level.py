@@ -2,7 +2,7 @@
 import random
 import sys
 import pygame
-from code import EntityMediator
+from code.EntityMediator import EntityMediator
 from code.Enemy import Enemy
 from code.Entity import Entity
 from code.Const import CO_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, C_GREEN, C_CYAN, EVENT_TIMEOUT, \

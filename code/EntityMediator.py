@@ -9,7 +9,8 @@ from code.EnemyShoot import EnemyShot
 class EntityMediator:
 
     @classmethod
-    def __verify_collision_window(cls, ent: list[Entity]):
+    def __verify_collision_window(cls, ent: Entity):
+        # CORREÇÃO: Removido o 'list[Entity]' do argumento porque aqui avaliamos uma entidade por vez
         if isinstance(ent, Enemy):
             if ent.rect.right <= 0:
                 ent.health = 0
@@ -21,7 +22,7 @@ class EntityMediator:
                 ent.health = 0
 
     @classmethod
-    def __verify_collision_entity(cls, ent1: [Entity], ent2: [Entity]):
+    def __verify_collision_entity(cls, ent1: Entity, ent2: Entity):
         valid_interaction = False
 
         if isinstance(ent1, Player) and isinstance(ent2, Enemy):
@@ -73,10 +74,3 @@ class EntityMediator:
                     cls.__give_score(ent, entity_list)
                 entity_list.remove(ent)
 
-
-def verify_collision(entity_list):
-    return None
-
-
-def verify_health(entity_list):
-    return None
